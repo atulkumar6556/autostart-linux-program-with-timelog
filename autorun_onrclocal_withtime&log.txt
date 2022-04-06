@@ -1,0 +1,19 @@
+#!/bin/bash
+
+echo `date +%F" "%T` "Starting Programs"  >> /root/checkstartup.log
+
+sudo /usr/bin/python3 /home/admin1/Videos/run/zones_alerts_sender.py  &
+sudo /usr/bin/python3 /home/admin1/Videos/run/ai_code_v2.py  &
+sudo /usr/bin/python3 /home/admin1/Videos/run/camera_stream_1.py &
+sudo /usr/bin/python3 /home/admin1/Videos/run/camera_stream_2.py &
+sudo /usr/bin/python3 /home/admin1/Videos/run/camera_stream_3.py  &
+sudo /usr/bin/python3 /home/admin1/Videos/run/camera_stream_4.py  &
+sudo /usr/bin/python3 /home/admin1/Videos/run/send_logs.py &
+sudo /usr/bin/python3 /home/admin1/Videos/run/cmd_reader.py &
+sudo /usr/bin/python3 /home/admin1/Videos/run/video_uploader.py &
+
+
+echo `date +%F" "%T` "Programs Started"  >> /root/checkstartup.log
+
+
+exit 0
